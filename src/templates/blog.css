@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* width: 100%; */
+}
+.img{
+    width: 90%;
+    margin: auto;
+
+}
+.image{
+    width: 100%;
+    height: 300px;
+}
+.heading{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.para{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    color: wheat;
+    background-color: transparent;
+
+}
+.bg{
+    background-color: #111111;
+}
+.width{
+    width: 100%;
+}
+.a{
+    width:100%;
+}
+.card{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 45px;
+}
+.parag{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 36px;
+}
+.new{
+    width: 100%;
+    text-align: center;
+    color: black;
+}

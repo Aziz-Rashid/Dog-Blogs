@@ -1,22 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import Cards from '../components/Cards/Cards'
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
+import { graphql } from "gatsby"
+export const query = graphql`
+  {
+     lesson : allContentfulDogBlog {
+      edges {
+        node {
+          slug
+          title
+          price
+          image {
+            fluid {
+              src
+            }
+          }
+          about
+        }
+      }
+    }
+  }
+`
+const IndexPage = ({data:{lesson:{edges}}}) => {
+  return(
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <div className="bg">
+        {edges.map(el =>(
+         <Cards title={el.node.title} about={el.node.about} image={el.node.image.fluid.src} slug={el.node.slug}/>
+        ))}
+        </div>
   </Layout>
-)
+  )
+}
 
 export default IndexPage
