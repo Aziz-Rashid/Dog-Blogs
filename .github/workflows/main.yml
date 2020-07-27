@@ -27,6 +27,6 @@ jobs:
     - name: Build
       run: yarn build
     - name: install surge
-      run: npm install --global surge
+      run: sudo npm install --global surge
     - name: Deploy
-      run: surge _build/ --prod blog-contentful.surge.sh --token ${{ secrets.TOKEN }}
+      run: surge public/ blog-contentful.surge.sh --token ${{ secrets.TOKEN }}
