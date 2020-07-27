@@ -14,10 +14,10 @@ const Cards = ({title,about,image,slug})=> {
     <Card className="card">
        <Link to={`/${slug}`} style={{color:'black',textDecorationLine:'none'}}>
       <CardActionArea>
-        <img className="a" src={image} alt="" />
+        <img className="b" src={image} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h1" >
-          <p className="parag" >{title}</p>
+          <p className="parag a" >{title}</p>
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className="new">
           {about}
@@ -27,7 +27,7 @@ const Cards = ({title,about,image,slug})=> {
       <CardActions style={{display:'flex',justifyContent:'center'}}>
         <Button variant="outlined" color="primary">
           Details
-        </Button>
+        </Button >
         <Button variant="contained"  color="primary">
           Learn More
         </Button>

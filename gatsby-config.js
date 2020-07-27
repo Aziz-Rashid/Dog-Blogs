@@ -36,6 +36,9 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-page-transitions',
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

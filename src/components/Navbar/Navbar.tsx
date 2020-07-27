@@ -26,15 +26,15 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{backgroundColor:'#111111'}}>
+      <AppBar position="static" style={{backgroundColor:'#000000'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            Dog Blogs
+          <Typography variant="h5" className={classes.title}>
+            <span>Dog Blogs</span>
           </Typography>
-          <Link to="/" style={{color:'white',textDecorationLine:'none'}}><Button color="inherit">Home</Button></Link>
+          <Link to="/" style={{color:'red',textDecorationLine:'none'}}><Button color="inherit" className="a">Home</Button></Link>
         </Toolbar>
       </AppBar>
     </div>

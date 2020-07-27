@@ -18,7 +18,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     result.data.allContentfulDogBlog.edges.forEach(node => {
         actions.createPage({
             path: `/${node.node.slug}/`,
-            component: require.resolve("./src/templates/blog.js"),
+            component: require.resolve("./src/templates/blog.tsx"),
             context: {
                 slug: node.node.slug,
             },
