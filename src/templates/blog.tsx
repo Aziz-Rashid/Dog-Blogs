@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import './blog.css'
 import Layout from '../components/layout'
-import PageTransition from 'gatsby-plugin-page-transitions';
+// import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const query = graphql` 
     query ($slug: String!) {
@@ -27,7 +27,7 @@ const blog = ({ data: { datas } }) => {
     console.log(datas)
     return (
         <Layout>
-            <PageTransition defaultStyle={{
+            {/* <PageTransition defaultStyle={{
                 transition: 'left 2000ms cubic-bezier(0.47, 0, 0.75, 0.72)',
                 left: '100%',
                 position: 'absolute',
@@ -38,7 +38,7 @@ const blog = ({ data: { datas } }) => {
                     entered: { left: '0%' },
                     exiting: { left: '100%' },
                 }}
-                transitionTime={5000}>
+                transitionTime={5000}> */}
                 <div className="bg">
                     <div className="img">
                         <img className="image" src={datas.image.fluid.src} alt="" />
@@ -53,7 +53,7 @@ const blog = ({ data: { datas } }) => {
                         </div>
                     </div>
                 </div>
-            </PageTransition>
+            {/* </PageTransition> */}
         </Layout>
     )
 }

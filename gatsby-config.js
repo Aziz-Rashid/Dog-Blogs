@@ -51,7 +51,10 @@ module.exports = {
       },
     },
     
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      
+    },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
